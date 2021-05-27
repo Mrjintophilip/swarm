@@ -1,0 +1,8 @@
+
+sudo docker build -t hello -f hello-service/Dockerfile hello-service
+
+sudo docker build -t goodbye -f goodbye-service/Dockerfile goodbye-service
+
+sudo docker stack deploy -c ./docker-compose.yml talk
+
+sudo docker service ls
